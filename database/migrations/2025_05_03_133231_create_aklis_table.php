@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('nama');
             $table->string('email')->unique();
             $table->string('no_hp')->unique();
+            $table->string('latitude')->nullable();
+            $table->string('longitude')->nullable();
             $table->text('alamat');
             $table->timestamps();
         });

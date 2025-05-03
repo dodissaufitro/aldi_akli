@@ -18,7 +18,7 @@ class User extends Authenticatable
         static::created(function ($user) {
             // Jika pengguna baru tidak memiliki role, beri role default 'user'
             if ($user->roles->isEmpty()) {
-                $user->assignRole('Pengguna');
+                $user->assignRole('user');
             }
         });
     }
